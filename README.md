@@ -24,7 +24,7 @@
 ## Architecture
 
 ```
-┌─────────────┐        HTTP/JSON        ┌──────────────────┐
+┌─────────────┐        HTTP/JSON         ┌──────────────────┐
 │             │ ──── POST /handshake ──▶ │                  │
 │    React    │       /advance etc.      │  FastAPI Backend │
 │  Frontend   │ ◀─── step data + meta ── │                  │
