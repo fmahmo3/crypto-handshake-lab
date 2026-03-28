@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crypto-handshake-lab-backend"
+version = "0.1.0"
+description = "Diffie-Hellman + AES-GCM + HMAC handshake engine and API for the crypto lab"
+requires-python = ">=3.11"
+dependencies = [
+    "cryptography>=42.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "httpx>=0.27",    # required by FastAPI TestClient
+    "requests>=2.31", # Starlette TestClient fallback
+    "ruff>=0.4",
+]
+
+# ---------------------------------------------------------------------------
+# Package discovery
+# ---------------------------------------------------------------------------
+[tool.setuptools.packages.find]
+where = ["src"]  # finds crypto_engine under backend/src/
+
+# ---------------------------------------------------------------------------
+# pytest
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Add backend/ root to sys.path so `import api` resolves in tests.
+# crypto_engine is installed as a package via `pip install -e .`
+pythonpath = ["."]
