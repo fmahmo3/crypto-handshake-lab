@@ -1,0 +1,88 @@
+# Claude Code
+.claude/
+CLAUDE.md
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.eggs/
+*.egg-info/
+dist/
+build/
+wheels/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pytest
+.pytest_cache/
+.cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# mypy / type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# =============================================================================
+# Node / React (Part 2)
+# =============================================================================
+node_modules/
+.npm/
+
+# Build output
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/out/
+
+# Vite / Parcel cache
+.parcel-cache/
+.vite/
+
+# =============================================================================
+# Environment / secrets
+# =============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+secrets/
+
+# =============================================================================
+# Editors & IDEs
+# =============================================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# Logs
+# =============================================================================
+*.log
+logs/
