@@ -1,0 +1,20 @@
+# Build output (re-built inside Docker)
+dist/
+node_modules/
+
+# Cache
+.vite/
+.parcel-cache/
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Secrets
+.env
+.env.*
+
+# Docs
+README.md
